@@ -30,7 +30,7 @@
 
             if ($coluna["id_usuario"] == 1)
             {
-                header('location: ../dashboard.html');
+                header('location: ../dashboard.php');
                 // echo "olá mundo";
             }
             // else 

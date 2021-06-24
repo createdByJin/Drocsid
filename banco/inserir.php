@@ -18,7 +18,7 @@
     $resultLogin = mysqli_query($conn, $sql);
     mysqli_close($conn);
 
-    header("location: consulta.php");
+    header("location: ../inventario.php");
 
     // var_dump($resultLogin);
     // die();

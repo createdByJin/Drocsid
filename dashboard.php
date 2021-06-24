@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="inventario.html">
+                            <a href="inventario.php">
                                 <i class="fas fa-chart-bar"></i>Inventário
                             </a>
                         </li>

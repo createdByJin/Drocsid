@@ -33,6 +33,10 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
+    <?php
+        include("banco/consulta.php");
+    ?>
+
 </head>
 
 <body class="animsition">
@@ -226,7 +230,7 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive table-responsive-data2">
-                                    <table class="table table-data2">
+                                    <!-- <table class="table table-data2">
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
@@ -312,19 +316,20 @@
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
+                                    <?php echo dataBase_data(); ?>
                                 </div>
                                 <!-- END DATA TABLE -->
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="copyright">
-                                    <p>Copyright © 2021 Artur. All rights reserved.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">
+                    <p>Copyright © 2021 Artur. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -343,7 +348,7 @@
                         <form action="banco/inserir.php" method="post" novalidate="novalidate">
                             <div class="form-group">
                                 <label for="cc-payment" class="control-label mb-1">ID</label>
-                                <input id="cc-pament" name="id" type="text" class="form-control" aria-required="true" aria-invalid="false">
+                                <input id="cc-pament" name="id" type="text" class="form-control" autocomplete="off" aria-required="true" aria-invalid="false">
                             </div>
                             <div class="form-group has-success">
                                 <label for="cc-name" class="control-label mb-1">Descrição</label>
@@ -357,7 +362,7 @@
                                         <label for="cc-exp" class="control-label mb-1">Quantidade</label>
                                         <input id="cc-exp" name="quant" type="number" class="form-control cc-exp" value="1" data-val="true" data-val-required="Please enter the card expiration"
                                             data-val-cc-exp="Please enter a valid month and year"
-                                            autocomplete="cc-exp">
+                                            autocomplete="off">
                                         <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
@@ -385,7 +390,7 @@
 				<div class="modal-dialog modal-sm" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="smallmodalLabel">Excluir Cadastro</h5>
+							<h5 class="modal-title" id="smallmodalLabel">Excluir</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -402,8 +407,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- end modal small -->
-
+		<!-- end modal small -->
     </div>
 
     <!-- Jquery JS-->
