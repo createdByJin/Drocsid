@@ -35,6 +35,7 @@
 
     <?php
         include("banco/consulta.php");
+        include("banco/editar.php");
     ?>
 
 </head>
@@ -51,97 +52,15 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="index.html">Dashboard 1</a>
-                                </li>
-                                <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
-                                </li>
-                                <li>
-                                    <a href="index4.html">Dashboard 4</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                            <a href="dashboard.php">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard
+                            </a>
                         </li>
-                        <li class="active">
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
+                        <li class="active has-sub">
+                            <a href="inventario.php">
+                                <i class="fas fa-chart-bar"></i>Inventário
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -334,7 +253,7 @@
             </div>
         </div>
         <!-- modal static -->
-            <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true"
+        <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true"
             data-backdrop="static">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
@@ -385,6 +304,58 @@
             </div>
         </div>
         <!-- end modal static -->
+         <!-- edit modal static -->
+         <!-- <div class="modal fade" id="EditStaticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true"
+            data-backdrop="static">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticModalLabel">Editar Cadastro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="banco/inserir.php" method="post" novalidate="novalidate">
+                            <div class="form-group">
+                                <label for="cc-payment" class="control-label mb-1">ID</label>
+                                <input id="cc-pament" name="id" type="text" class="form-control" autocomplete="off" aria-required="true" aria-invalid="false">
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="cc-name" class="control-label mb-1">Descrição</label>
+                                <input id="cc-name" name="desc" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                                    autocomplete="off" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="cc-exp" class="control-label mb-1">Quantidade</label>
+                                        <input id="cc-exp" name="quant" type="number" class="form-control cc-exp" value="1" data-val="true" data-val-required="Please enter the card expiration"
+                                            data-val-cc-exp="Please enter a valid month and year"
+                                            autocomplete="off">
+                                        <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="x_card_code" class="control-label mb-1">Categoria</label>
+                                    <div class="input-group">
+                                        <input id="x_card_code" name="categ" type="text" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                            data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Confirm</button>
+                            </div>
+                        </form>
+                    </div>                    
+                </div>
+            </div>
+        </div> -->
+        <!-- end edit modal static -->
         <!-- modal small -->
 			<div class="modal fade" id="smallmodal" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-sm" role="document">
