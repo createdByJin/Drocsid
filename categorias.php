@@ -122,7 +122,7 @@
                                     </aside>
                                 <!-- END MENU SIDEBAR-->
                             </div>
-                            <div class="col-xl-9">
+                            <div class="col-xl-6">
                                 <!-- PAGE CONTENT-->
                                     <div class="page-content">
                                         <div class="card">
@@ -163,63 +163,63 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                        </div>
-                                        <!-- BLUE TABLE -->
-                                            <div class="col-lg-3">
-                                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-30">
-                                                    <div class="au-card-inner">
-                                                        <div class="table-responsive">
-                                                            <table class="table table-top-countries">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>United States</td>
-                                                                        <td class="text-right">$119,366.96</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Australia</td>
-                                                                        <td class="text-right">$70,261.65</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>United Kingdom</td>
-                                                                        <td class="text-right">$46,399.22</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Turkey</td>
-                                                                        <td class="text-right">$35,364.90</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Germany</td>
-                                                                        <td class="text-right">$20,366.96</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>France</td>
-                                                                        <td class="text-right">$10,366.96</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Australia</td>
-                                                                        <td class="text-right">$5,366.96</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Italy</td>
-                                                                        <td class="text-right">$1639.32</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <!-- END BLUE TABLE -->
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="copyright">
-                                                    <p>Copyright © 2021 Drocsid. All rights reserved.</p>
-                                                </div>
+                                        </div> 
+                                    </div>
+                                <!-- END PAGE CONTENT-->
+                            </div>
+                            <!-- BLUE TABLE -->
+                                <div class="col-lg-3">
+                                    <div class="au-card au-card--bg-blue au-card-top-countries m-b-30">
+                                        <div class="au-card-inner">
+                                            <div class="table-responsive">
+                                                <table class="table table-top-countries">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>United States</td>
+                                                            <td class="text-right">$119,366.96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Australia</td>
+                                                            <td class="text-right">$70,261.65</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>United Kingdom</td>
+                                                            <td class="text-right">$46,399.22</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Turkey</td>
+                                                            <td class="text-right">$35,364.90</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Germany</td>
+                                                            <td class="text-right">$20,366.96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>France</td>
+                                                            <td class="text-right">$10,366.96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Australia</td>
+                                                            <td class="text-right">$5,366.96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Italy</td>
+                                                            <td class="text-right">$1639.32</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
-                                <!-- END PAGE CONTENT-->
-                            </div>                    
+                                </div>
+                            <!-- END BLUE TABLE -->                 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2021 Drocsid. All rights reserved.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
