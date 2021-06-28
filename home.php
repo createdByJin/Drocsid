@@ -90,33 +90,33 @@
                     <div class="row">
                         <div class="col-xl-3">
                             <!-- MENU SIDEBAR-->
-                            <aside class="menu-sidebar3 js-spe-sidebar">
-                                <nav class="navbar-sidebar2 navbar-sidebar3">
-                                    <ul class="list-unstyled navbar__list">
-                                        <li class="active has-sub">
-                                            <a href="#">
-                                                <i class="fas fa-tachometer-alt"></i>Home
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="js-arrow" href="#">
-                                                <i class="fas fa-database"></i>Produtos
-                                                <span class="arrow">
-                                                    <i class="fas fa-angle-down"></i>
-                                                </span>
-                                            </a>
-                                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                                <li>
-                                                    <a href="novo-cadastro.php">Novo Cadastro</a>
-                                                </li>
-                                                <li>
-                                                    <a href="categorias.php">Categorias</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </aside>
+                                <aside class="menu-sidebar3 js-spe-sidebar">
+                                    <nav class="navbar-sidebar2 navbar-sidebar3">
+                                        <ul class="list-unstyled navbar__list">
+                                            <li class="active has-sub">
+                                                <a href="#">
+                                                    <i class="fas fa-tachometer-alt"></i>Home
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="js-arrow" href="#">
+                                                    <i class="fas fa-database"></i>Produtos
+                                                    <span class="arrow">
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </span>
+                                                </a>
+                                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                                    <li>
+                                                        <a href="novo-cadastro.php">Novo Cadastro</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="categorias.php">Categorias</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </aside>
                             <!-- END MENU SIDEBAR-->
                         </div>
                         <div class="col-xl-9">
@@ -140,6 +140,13 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
+                                        <section class="alert-wrap p-t-70">
+                                            <div class="alert alert-light" role="alert">
+                                                <h3 class="alert-heading">
+                                                    <strong class="card-title">Últimos Registros</strong>
+                                                </h3>
+                                            </div>
+                                        </section>
                                         <!-- DATA TABLE-->
                                         <div class="table-responsive m-b-40">
                                             <table class="table table-borderless table-data3">

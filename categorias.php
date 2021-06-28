@@ -86,101 +86,146 @@
         <!-- END WELCOME-->
 
         <!-- PAGE CONTENT-->
-        <div class="page-container3">
-            <section class="alert-wrap p-t-70"></section>
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3">
-                            <!-- MENU SIDEBAR-->
-                            <aside class="menu-sidebar3 js-spe-sidebar">
-                                <nav class="navbar-sidebar2 navbar-sidebar3">
-                                    <ul class="list-unstyled navbar__list">
-                                        <li>
-                                            <a href="home.php">
-                                                <i class="fas fa-tachometer-alt"></i>Home
-                                            </a>
-                                        </li>
-                                        <li class="active has-sub">
-                                            <a class="js-arrow" href="#">
-                                                <i class="fas fa-database"></i>Produtos
-                                                <span class="arrow">
-                                                    <i class="fas fa-angle-down"></i>
-                                                </span>
-                                            </a>
-                                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+            <div class="page-container3">
+                <section class="alert-wrap p-t-70"></section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <!-- MENU SIDEBAR-->
+                                    <aside class="menu-sidebar3 js-spe-sidebar">
+                                        <nav class="navbar-sidebar2 navbar-sidebar3">
+                                            <ul class="list-unstyled navbar__list">
                                                 <li>
-                                                    <a href="novo-cadastro.php">Novo Cadastro</a>
+                                                    <a href="home.php">
+                                                        <i class="fas fa-tachometer-alt"></i>Home
+                                                    </a>
                                                 </li>
-                                                <li class="active">
-                                                    <a href="#">Categorias</a>
+                                                <li class="active has-sub">
+                                                    <a class="js-arrow" href="#">
+                                                        <i class="fas fa-database"></i>Produtos
+                                                        <span class="arrow">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </span>
+                                                    </a>
+                                                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                                        <li>
+                                                            <a href="novo-cadastro.php">Novo Cadastro</a>
+                                                        </li>
+                                                        <li class="active">
+                                                            <a href="#">Categorias</a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </aside>
-                            <!-- END MENU SIDEBAR-->
-                        </div>
-                        <div class="col-xl-8">
-                            <!-- PAGE CONTENT-->
-                            <div class="page-content">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <strong>NOVA CATEGORIA</strong>
-                                    </div>
-                                    <div class="card-body card-block">
-                                        <form action="home.php" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label class=" form-control-label"></label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <p class="form-control-static"></p>
-                                                </div>
+                                        </nav>
+                                    </aside>
+                                <!-- END MENU SIDEBAR-->
+                            </div>
+                            <div class="col-xl-9">
+                                <!-- PAGE CONTENT-->
+                                    <div class="page-content">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <strong>NOVA CATEGORIA</strong>
                                             </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Descrição</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="text-input" placeholder="Digite aqui..." class="form-control">
+                                            <div class="card-body card-block">
+                                                 <form action="produtos/inserirCategoria.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                     <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label class=" form-control-label"></label>
+                                                        </div>
                                                         <div class="col-12 col-md-9">
                                                             <p class="form-control-static"></p>
+                                                            <input type="hidden" name="id-produto" value="default">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-group">
+                                                        <div class="col col-md-3">
+                                                            <label for="desc-input" class="form-control-label">Descrição</label>
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <input type="text" id="desc-input" name="desc-prod" placeholder="Digite aqui..." class="form-control">
+                                                            <div class="row form-group">
+                                                                <div class="col-12 col-md-9">
+                                                                    <p class="form-control-static"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <button type="submit" class="btn btn-primary btn-sm">
+                                                            <i class="fa fa-dot-circle-o"></i> Salvar
+                                                        </button>
+                                                        <button type="reset" class="btn btn-danger btn-sm">
+                                                            <i class="fa fa-ban"></i> Limpar
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- BLUE TABLE -->
+                                            <div class="col-lg-3">
+                                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-30">
+                                                    <div class="au-card-inner">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-top-countries">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>United States</td>
+                                                                        <td class="text-right">$119,366.96</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Australia</td>
+                                                                        <td class="text-right">$70,261.65</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>United Kingdom</td>
+                                                                        <td class="text-right">$46,399.22</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Turkey</td>
+                                                                        <td class="text-right">$35,364.90</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Germany</td>
+                                                                        <td class="text-right">$20,366.96</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>France</td>
+                                                                        <td class="text-right">$10,366.96</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Australia</td>
+                                                                        <td class="text-right">$5,366.96</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Italy</td>
+                                                                        <td class="text-right">$1639.32</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card-footer">
-                                                <button type="submit" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-dot-circle-o"></i> Salvar
-                                                </button>
-                                                <button type="reset" class="btn btn-danger btn-sm">
-                                                    <i class="fa fa-ban"></i> Limpar
-                                                </button>
+                                        <!-- END BLUE TABLE -->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="copyright">
+                                                    <p>Copyright © 2021 Drocsid. All rights reserved.</p>
+                                                </div>
                                             </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="copyright">
-                                            <p>Copyright © 2021 Drocsid. All rights reserved.</p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- END PAGE CONTENT-->
+                                <!-- END PAGE CONTENT-->
+                            </div>                    
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
         <!-- END PAGE CONTENT  -->
-
     </div>
-
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->

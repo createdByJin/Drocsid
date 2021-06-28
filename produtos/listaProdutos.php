@@ -8,7 +8,8 @@
                 FROM produtos p
                 INNER JOIN categorias c
                 ON c.id_categoria = p.categoria_id
-                ORDER BY p.id_produto";
+                ORDER BY p.id_produto
+                DESC";
 
         $result = mysqli_query($conn,$sql);
         mysqli_close($conn);
@@ -46,7 +47,7 @@
                                 .'<td>'.$coluna["categoria"].'</td>'
                                 .'<td>'
                                     .'<div class="table-data-feature">'
-                                        .'<form action="editar-produto.php" method="get">'
+                                        .'<form action="editarProduto.php" method="get">'
                                             .'<input type="hidden" name="id_produto" value="'.$coluna["id_produto"].'">'
                                             .'<button type="submit" class="item" data-placement="top" title="Edit">'
                                                 .'<i class="zmdi zmdi-edit"></i>'
@@ -60,7 +61,7 @@
                                         .'<div class="modal fade" id="smallmodal'.$coluna["id_produto"].'" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">'
                                             .'<div class="modal-dialog modal-sm" role="document">'
                                                 .'<div class="modal-content">'
-                                                    .'<form action="#" method="post">'
+                                                    .'<form action="produtos/excluirProduto.php" method="post">'
                                                         .'<div class="modal-header">'
                                                             .'<h5 class="modal-title" id="smallmodalLabel">EXCLUIR</h5>'
                                                             .'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'

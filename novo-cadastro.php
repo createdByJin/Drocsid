@@ -33,6 +33,10 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
+    <?php
+        include("produtos/listaCategorias.php");
+    ?>
+
 </head>
 
 <body class="animsition">
@@ -130,21 +134,22 @@
                                         <strong>NOVO CADASTRO</strong>
                                     </div>
                                     <div class="card-body card-block">
-                                        <form action="home.html" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                        <form action="produtos/inserirProduto.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label class=" form-control-label"></label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
                                                     <p class="form-control-static"></p>
+                                                    <input type="hidden" name="id-produto" value="default">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Descrição</label>
+                                                    <label for="desc-input" class="form-control-label">Descrição</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="text-input" placeholder="Digite aqui..." class="form-control">
+                                                    <input type="text" id="desc-input" name="desc-prod" placeholder="Digite aqui..." class="form-control">
                                                     <div class="row form-group">
                                                         <div class="col-12 col-md-9">
                                                             <p class="form-control-static"></p>
@@ -154,10 +159,10 @@
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="email-input" class=" form-control-label">Quantidade</label>
+                                                    <label for="quant-input" class="form-control-label">Quantidade</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="number" id="email-input" name="email-input" placeholder="Number" value="1" class="form-control col-md-4">
+                                                    <input type="number" id="quant-input" name="quant-prod" placeholder="Number" value="1" class="form-control col-md-4">
                                                     <div class="row form-group">
                                                         <div class="col-12 col-md-9">
                                                             <p class="form-control-static"></p>
@@ -167,7 +172,7 @@
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="select" class=" form-control-label">Categoria</label>
+                                                    <label for="select-categ" class="form-control-label">Categoria</label>
                                                     <div class="row form-group">
                                                         <div class="col-12 col-md-9">
                                                             <p class="form-control-static"></p>
@@ -175,12 +180,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-4">
-                                                    <select name="select" id="select" class="form-control">
-                                                        <option value="0">Selecione</option>
-                                                        <option value="1">Eletrônicos</option>
-                                                        <option value="2">Roupas</option>
-                                                        <option value="3">Acessórios</option>
-                                                        <option value="4">Outros...</option>
+                                                    <select name="categoria" id="select-categ" class="form-control">
+                                                        <?php echo all_category(); ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -236,7 +237,6 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
-
 </body>
 
 </html>
