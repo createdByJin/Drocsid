@@ -63,11 +63,10 @@
                         <div class="welcome2-inner m-t-60">
                             <div class="welcome2-greeting">
                                 <h1 class="title-6">Bem vindo
-                                    <span>John</span>
                                 </h1>
                                 <ul class="list-unstyled list-inline au-breadcrumb__list">
                                     <li class="list-inline-item active">                                        
-                                        <a href="#">Sair
+                                        <a href="entrar.php">Sair
                                             <span>
                                                 <i class="fas fa-sign-out-alt"></i>
                                             </span>

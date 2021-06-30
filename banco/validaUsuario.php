@@ -3,13 +3,13 @@
     $nome = $_POST["nome"];
     $senha = $_POST["password"];
 
-    include("conexao.php");
+    include("../database/conection.php");
 
     // var_dump($nome);
     // die();
 
-    $sql = "SELECT * FROM login "
-            ." WHERE Nome = '$nome' "
+    $sql = "SELECT * FROM usuarios "
+            ." WHERE login = '$nome'"
             ." AND Senha = '$senha'";
 
 
@@ -30,7 +30,7 @@
 
             if ($coluna["id_usuario"] == 1)
             {
-                header('location: ../dashboard.php');
+                header('location: ../home.php');
                 // echo "olá mundo";
             }
             // else 

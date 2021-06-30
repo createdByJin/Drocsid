@@ -39,7 +39,6 @@
     ?>
 
 </head>
-
 <body class="animsition">
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
@@ -117,7 +116,6 @@
                 </div>
             </header>
             <!-- END HEADER DESKTOP-->
-
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
